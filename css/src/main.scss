@@ -1,8 +1,42 @@
-// fonts
-@import './font/opensans';
-
-// layout and structure
-@import './layout';
-
 // main content pane styles
-@import './components/content';
+@import "./components/content";
+@import "./components/frontpage";
+@import "./components/header";
+@import "./components/typography";
+@import "./components/button";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+ul,
+ol {
+    list-style: none; /* Remove default marker for all lists */
+}
+
+ul li::marker,
+ol li::marker {
+    display: none; /* Hide the marker for list items */
+}
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: normal;
+}
+// Definisanje novih kontejnera
+.container {
+    max-width: 1610px;
+    margin: 0 auto;
+    @media (max-width: 1920px) {
+        max-width: 84vw;
+    }
+
+    @media (max-width: 1440px) {
+        max-width: 90vw;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 95vw;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 100vw;
+    }
+}
+

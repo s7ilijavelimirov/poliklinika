@@ -1,14 +1,22 @@
-import { DisplayLabel } from './components/DisplayLabel';
+jQuery(document).ready(function ($) {
+    const spaceHolder = document.querySelector('.space-holder');
+    const horizontal = document.querySelector('.horizontal');
+    spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
 
-let Main = {
-  init: async function () {
+    function calcDynamicHeight(ref) {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const objectWidth = ref.scrollWidth;
+        return objectWidth - vw + vh + 500; // 150 is the padding (in pixels) desired on the right side of the .cards container. This can be set to whatever your styles dictate
+    }
 
-    // initialize demo javascript component - async/await invokes some 
-    //  level of babel transformation
-    const displayLabel = new DisplayLabel();
-    await displayLabel.init();
+    window.addEventListener('scroll', () => {
+        const sticky = document.querySelector('.sticky');
+        horizontal.style.transform = `translateX(-${sticky.offsetTop}px)`;
+    });
 
-  }
-};
-
-Main.init();
+    window.addEventListener('resize', () => {
+        spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
+    });
+    
+});
