@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Webpack 5 WordPress Theme Boilerplate
 
 Provides a boilerplate WordPress theme that features a webpack 5 build for CSS/SASS and JavaScript. The webpack configuration is defined in the [webpack.config.js](./webpack.config.js), and the compiled assets are included in the WordPress theme via code in the [functions.php](./functions.php).
@@ -33,3 +34,7 @@ ln -s /code-directory/wp-barebone-theme-webpack5-sass /var/www/html/wp-content/t
 ## Blog Post
 
 Check out a blog post I created that describes configuring webpack to work with WordPress in more detail: [https://taylor.callsen.me/using-webpack-5-and-sass-with-wordpress/](https://taylor.callsen.me/using-webpack-5-and-sass-with-wordpress/)
+=======
+# poliklinika
+Website
+>>>>>>> 2b41362a00dc6fc40f1918718c58bf8c05cfac1c
